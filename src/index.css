@@ -1,13 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Josefin Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.dark-mode {
+  background-color: hsl(235, 21%, 11%);
+  color: #eeeeee;
+}
+
+.light-mode {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 21%, 11%);
+}
+
+[type="checkbox "]:checked + span:after,
+[type="checkbox "].with-gap:checked + span:before,
+[type="checkbox "].with-gap:checked + span:after {
+  background: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border-width: 2px;
+  border-image: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+    0 0 0 0;
+  background: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+      padding-box,
+    linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+  border-radius: 50%;
+}
+
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+  background: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border-width: 2px;
+  border-image: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+    0 0 0 0;
+  background: linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+      padding-box,
+    linear-gradient(97deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+  border-radius: 50%;
+}
+
+[type="checkbox"].filled-in:not(:checked) + span:not(.lever):after {
+  border-radius: 50%;
+}
+
+[type="checkbox"]+span:not(.lever) {
+  font-size: 18px;
 }

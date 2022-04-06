@@ -1,10 +1,10 @@
 import React from 'react'
+import { HeaderContainer } from '../styles/HeaderStyles'
 
 function Header() {
   return (
-    <header>
-        
-    </header>
+    <HeaderContainer dark={true}>
+    </HeaderContainer>
   )
 }
 
