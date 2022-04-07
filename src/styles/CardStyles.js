@@ -34,6 +34,8 @@ export const CardHeader = styled.div`
 
 export const Task = styled.div`
   display: flex;
+  cursor: pointer;
+  position: relative;
   justify-content: space-between;
   background-color: hsl(235, 24%, 19%);
   padding: 20px 20px;
@@ -45,6 +47,18 @@ export const Task = styled.div`
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
     margin-top: 5%;
+  }
+  i.fa-times {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-size: 22px;
+    transform: translateY(-50%);
+    color: #5a5a5a;
+  }
+  i.fa-times:hover {
+    cursor: pointer;
+    color: #fff;
   }
 `;
 export const ActionsBar = styled.div`
@@ -80,13 +94,14 @@ export const ContainerInput = styled.div`
   justify-content: space-between;
   border-radius: 6px;
   position: relative;
-  i {
+  i.fa-circle {
     position: absolute;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
     color: #5a5a5a;
   }
+
 `;
 
 export const Input = styled.input`
