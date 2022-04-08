@@ -3,7 +3,7 @@ import { HeaderContainer } from '../styles/HeaderStyles'
 
 function Header() {
   return (
-    <HeaderContainer dark={true}>
+    <HeaderContainer className='header'>
     </HeaderContainer>
   )
 }

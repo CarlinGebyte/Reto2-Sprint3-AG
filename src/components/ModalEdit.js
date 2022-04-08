@@ -40,7 +40,7 @@ function ModalEdit() {
   };
   return (
     <ModalBG id="modal-bg">
-      <Modal>
+      <Modal className="modal">
         <i className="fas fa-times" onClick={closeModal}></i>
         <form onSubmit={handleSubmit}>
           <ContainerInput className="idContainer">
@@ -52,6 +52,7 @@ function ModalEdit() {
             <Input
               type="text"
               name="name"
+              className="inputAdd"
               id="nameEdit"
               placeholder="Edit task"
               onChange={handleInputChange}

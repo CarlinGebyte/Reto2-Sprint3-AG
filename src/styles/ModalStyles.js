@@ -8,7 +8,7 @@ export const ModalBG = styled.div`
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 10;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 `;
@@ -17,7 +17,7 @@ export const Modal = styled.div`
   position: relative;
   width: 80%;
   height: auto;
-  background: hsl(235, 21%, 11%);
+  
   border-radius: 4px;
   padding: 20px;
   display: flex;
@@ -33,7 +33,7 @@ export const Modal = styled.div`
   form {
     width: 80% !important;
   }
- .idContainer {
+  .idContainer {
     display: none;
   }
 `;

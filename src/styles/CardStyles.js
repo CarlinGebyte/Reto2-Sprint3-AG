@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CardContainer = styled.div`
   position: absolute;
   height: 80%;
-  width: 40%;
+  width: 50%;
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
@@ -27,7 +27,10 @@ export const CardHeader = styled.div`
     font-weight: 900;
     letter-spacing: 15px;
   }
-  img {
+  img.LightTheme {
+    content: url(https://raw.githubusercontent.com/CarlinGebyte/Reto2-Sprint3-AG/c2f3ca6eb6c5a7a406cc0554e1615bf6c148bf36/src/assets/img/icon-moon.svg);
+  }
+  img.DarkTheme {
     content: url(https://raw.githubusercontent.com/CarlinGebyte/Reto2-Sprint3-AG/f2cfb1553db07c52a13700a0e1a1a40c40a5abf9/src/assets/img/icon-sun.svg);
   }
 `;
@@ -39,14 +42,9 @@ export const Task = styled.div`
   justify-content: space-between;
   background-color: hsl(235, 24%, 19%);
   padding: 20px 20px;
-  border-bottom: 1px solid #fff;
-  label {
-    color: hsl(234, 39%, 85%);
-  }
   &:first-child {
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    margin-top: 5%;
   }
   i.fa-times {
     position: absolute;
@@ -66,16 +64,8 @@ export const ActionsBar = styled.div`
   justify-content: space-between;
   padding: 17px 20px;
   font-size: 14px;
-  background-color: hsl(235, 24%, 19%);
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
-  color: hsl(234, 11%, 52%);
-  a {
-    color: hsl(234, 11%, 52%);
-  }
-  a:hover {
-    color: hsl(236, 33%, 92%);
-  }
 `;
 
 export const Left = styled.span`
@@ -94,6 +84,7 @@ export const ContainerInput = styled.div`
   justify-content: space-between;
   border-radius: 6px;
   position: relative;
+  margin-bottom: 5%;
   i.fa-circle {
     position: absolute;
     top: 50%;
@@ -101,20 +92,16 @@ export const ContainerInput = styled.div`
     transform: translateY(-50%);
     color: #5a5a5a;
   }
-
 `;
 
 export const Input = styled.input`
   font-size: 18px !important;
   width: 100% !important;
-  background-image: "\f111" !important;
   height: 40px !important;
   border-bottom: 1px solid transparent !important;
   box-shadow: none !important;
   border-radius: 5px !important;
-  color: #fff !important;
-  background-color: hsl(235, 24%, 19%) !important;
-  border: 1px solid hsl(235, 24%, 19%) !important;
+
   padding: 10px 20px !important;
   font-family: "Josefin Sans" !important;
   font-size: 18px !important;
@@ -130,6 +117,5 @@ export const Input = styled.input`
 export const CardFooter = styled.div`
   text-align: center;
   font-size: 13px;
-  color: hsl(234, 11%, 52%);
   padding: 0 40px;
 `;

@@ -22,7 +22,7 @@ function Card() {
     name: "",
   });
 
-  const { tasks } = useSelector((state) => state.task);
+  const { tasks } = useSelector((state) => state.tasks);
 
   const dispatch = useDispatch();
   const { name } = formValue;
@@ -46,19 +46,55 @@ function Card() {
     idEdit.value = id;
   };
 
+  const toDark = () => {
+    const ligthIcon = document.querySelector("#LightTheme");
+    ligthIcon.style.display = "none";
+    const darkIcon = document.querySelector("#DarkTheme");
+    darkIcon.style.display = "block";
+    const body = document.querySelector("body");
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+  };
+  const toLight = () => {
+    const darkIcon = document.querySelector("#DarkTheme");
+    darkIcon.style.display = "none";
+    const ligthIcon = document.querySelector("#LightTheme");
+    ligthIcon.style.display = "block";
+    const body = document.querySelector("body");
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+  };
+
+  let counter = 0;
+
   return (
     <div>
       <CardContainer>
         <Content>
-          <CardHeader>
-            <h4>TODO</h4>
-            <img alt="Theme"></img>
+          <CardHeader className="cardHeader">
+            <h4 className="toDoH4">TODO</h4>
+            <img
+              id="DarkTheme"
+              className="DarkTheme"
+              alt="DarkTheme"
+              onClick={toLight}
+            ></img>
+            <img
+              id="LightTheme"
+              className="LightTheme"
+              alt="LightTheme"
+              onClick={toDark}
+            ></img>
           </CardHeader>
           <div>
-            {/* <ContainerInput> */}
-            <ContainerInput as="form" onSubmit={handleSubmit}>
+            <ContainerInput
+              className="containerInput"
+              as="form"
+              onSubmit={handleSubmit}
+            >
               <i className="far fa-circle"></i>
               <Input
+                className="inputAdd"
                 type="text"
                 name="name"
                 id="name"
@@ -67,55 +103,64 @@ function Card() {
                 onChange={handleInputChange}
               ></Input>
             </ContainerInput>
-            {/* </ContainerInput> */}
           </div>
-          <div>
-            {tasks.map((task) => (
-              <Task
-                id="edit"
-                key={task.id}
-                onClick={(e) => {
-                  console.log(e.target.id);
-                  if (e.target.id === "edit") {
-                    openModal(task.id, task.name);
-                  } else {
-                  }
-                }}
-              >
-                <label>
-                  <input type="checkbox" className="filled-in" id={task.id} />
-                  <span>{task.name}</span>
-                </label>
-                <i
-                  className="fas fa-times"
-                  onClick={() => deleteTask(task.id)}
-                ></i>
-              </Task>
-            ))}
+          <div className="containerTasks">
+            <div>
+              {tasks.map((task) => {
+                counter++;
+                return (
+                  <Task
+                    id="edit"
+                    className="edit task"
+                    key={task.id}
+                    onClick={(e) => {
+                      console.log();
+                      if (e.target.classList[2] === "edit") {
+                        openModal(task.id, task.name);
+                      } else {
+                      }
+                    }}
+                  >
+                    <label>
+                      <input
+                        type="checkbox"
+                        className="filled-in"
+                        id={task.id}
+                      />
+                      <span>{task.name}</span>
+                    </label>
+                    <i
+                      className="fas fa-times"
+                      onClick={() => deleteTask(task.id)}
+                    ></i>
+                  </Task>
+                );
+              })}
+            </div>
+            <ActionsBar className="actionsBar">
+              <Left className="left">{counter} items left</Left>
+              <FooterNav className="footerNav">
+                <a href="#?">
+                  <span>All</span>
+                </a>
+                <a href="#?">
+                  <span>Active</span>
+                </a>
+                <a href="#?">
+                  <span>Completed</span>
+                </a>
+              </FooterNav>
+              <a href="#?">
+                <span>Clear completed</span>
+              </a>
+            </ActionsBar>
           </div>
-          <ActionsBar>
-            <Left>5 items left</Left>
-            <FooterNav>
-              <a href="#?">
-                <span>All</span>
-              </a>
-              <a href="#?">
-                <span>Active</span>
-              </a>
-              <a href="#?">
-                <span>Completed</span>
-              </a>
-            </FooterNav>
-            <a href="#?">
-              <span>Clear completed</span>
-            </a>
-          </ActionsBar>
         </Content>
-        <CardFooter>
+        <CardFooter className="cardFooter">
           <p>Drag and drop to reoder list</p>
         </CardFooter>
       </CardContainer>
-      <ModalEdit editTask={"name"} id={1}></ModalEdit>
+      <ModalEdit className="modalEdit"></ModalEdit>
     </div>
   );
 }

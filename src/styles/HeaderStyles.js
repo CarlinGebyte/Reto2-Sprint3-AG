@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  ${({ dark }) =>
+  /* ${({ dark }) =>
     dark
       ? `
   background-image: url(https://raw.githubusercontent.com/CarlinGebyte/Reto2-Sprint3-AG/main/src/assets/img/bg-desktop-dark.jpg);
@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
   @media (max-width: 768px) {
     background-image: url(https://raw.githubusercontent.com/CarlinGebyte/Reto2-Sprint3-AG/main/src/assets/img/bg-mobile-light.jpg);
   }
-`}
+`} */
   background-size: cover;
   /* background-position: center; */
   background-repeat: no-repeat;

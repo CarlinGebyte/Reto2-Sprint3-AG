@@ -6,9 +6,10 @@ import {
 } from "../utils/localStorage";
 
 const reducers = combineReducers({
-  task: taskReducer,
+  tasks: taskReducer,
 });
 const storageState = obtenerLocaleStorage();
+console.log(storageState.tasks);
 const store = createStore(
   reducers,
   storageState,
@@ -16,7 +17,7 @@ const store = createStore(
 );
 
 store.subscribe(() => {
-  guardarLocaleStorage({ citas: store.getState().citas });
+  guardarLocaleStorage({ tasks: store.getState().tasks});
 });
 
 export default store;
