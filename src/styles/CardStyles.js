@@ -7,6 +7,15 @@ export const CardContainer = styled.div`
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 1000px) {
+    width: 60%;
+  }
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const Content = styled.div`

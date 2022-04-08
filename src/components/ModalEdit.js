@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { EditTask } from "../actions/taskActions";
 import { useForm } from "../hooks/useForm";
 import { ContainerInput, Input } from "../styles/CardStyles";
@@ -16,9 +16,9 @@ function ModalEdit() {
   const editTask = (task) => {
     dispatch(EditTask(task));
   };
-  const handleEdit = (id, nameEdit) => {
+  const handleEdit = (id, status, nameEdit) => {
     if (nameEdit !== "") {
-      editTask({ id, name: nameEdit });
+      editTask({ name: nameEdit, status, id });
       reset();
     } else {
       alert("Please enter a name");
@@ -28,7 +28,7 @@ function ModalEdit() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleEdit(e.target.id.value, name);
+    handleEdit(e.target.id.value, e.target.status.value, name);
     e.target.reset();
     reset();
     closeModal();
@@ -46,6 +46,10 @@ function ModalEdit() {
           <ContainerInput className="idContainer">
             <i className="far fa-circle"></i>
             <Input type="text" name="id" id="idEdit" disabled></Input>
+          </ContainerInput>
+          <ContainerInput className="idContainer">
+            <i className="far fa-circle"></i>
+            <Input type="text" name="status" id="statusEdit" disabled></Input>
           </ContainerInput>
           <ContainerInput>
             <i className="far fa-circle"></i>

@@ -23,6 +23,36 @@ code {
   color: #fff;
 }
 
+.footerNavMobile {
+  border-radius: 6px;
+  padding: 17px 2%;
+  margin-top: 5%;
+  font-size: 14px;
+  width: 100% !important;
+  justify-content: space-evenly !important;
+}
+.footerNavMobile {
+  border-radius: 6px;
+  padding: 17px 2%;
+  margin-top: 5%;
+  font-size: 14px;
+  width: 100% !important;
+  justify-content: space-evenly !important;
+}
+@media (min-width: 768px) {
+  .footerNavMobile {
+    display: none !important;
+  }
+  #footerNav {
+    display: flex !important;
+  }
+}
+@media (max-width: 768px) {
+  #footerNav {
+    display: none !important;
+  }
+}
+
 [type="checkbox "]:checked + span:after,
 [type="checkbox "].with-gap:checked + span:before,
 [type="checkbox "].with-gap:checked + span:after {
@@ -94,11 +124,26 @@ body.dark-mode .task {
 body.dark-mode .task label {
   color: hsl(234, 39%, 85%);
 }
+body.dark-mode .task .checked span{
+  text-decoration: line-through;
+  color: hsl(234, 11%, 52%);
+}
 body.dark-mode .cardFooter {
   color: hsl(234, 11%, 52%);
 }
 body.dark-mode .modal {
   background: hsl(235, 21%, 11%);
+}
+
+body.dark-mode .footerNavMobile {
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 11%, 52%);
+}
+body.dark-mode .footerNavMobile a {
+  color: hsl(234, 11%, 52%);
+}
+body.dark-mode .footerNavMobile a:hover {
+  color: hsl(236, 33%, 92%);
 }
 
 body.light-mode .header {
@@ -135,6 +180,11 @@ body.light-mode .task {
 body.light-mode .task label {
   color: #303038;
 }
+
+body.light-mode .task .checked span {
+  text-decoration: line-through;
+  color: hsl(236, 9%, 61%);
+}
 body.light-mode .containerTasks {
   box-shadow: 0px 2px 19px 5px rgba(0, 0, 0, 0.14);
 }
@@ -145,7 +195,17 @@ body.light-mode .cardFooter {
 body.light-mode .modal input {
   box-shadow: 0px 2px 19px 5px rgba(0, 0, 0, 0.14) !important;
 }
-body.light-mode .modal  .fa-times {
-    color: #303038;
+body.light-mode .modal .fa-times {
+  color: #303038;
+}
 
+body.light-mode .footerNavMobile {
+  background-color: #fff;
+  box-shadow: 0px 2px 19px 5px rgb(0 0 0 / 14%);
+}
+body.light-mode .footerNavMobile a {
+  color: hsl(236, 9%, 61%);
+}
+body.light-mode .footerNavMobile a:hover {
+  color: hsl(235, 19%, 35%);
 }

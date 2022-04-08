@@ -24,6 +24,11 @@ export const taskReducer = (state = initialState, action) => {
         ...state,
         tasks: state.tasks.filter((task) => task.id !== action.payload),
       };
+    case types.clear:
+      return {
+        ...state,
+        tasks: state.tasks.filter((task) => task.status !== action.payload),
+      };
     default:
       return state;
   }
