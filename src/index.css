@@ -124,7 +124,7 @@ body.dark-mode .task {
 body.dark-mode .task label {
   color: hsl(234, 39%, 85%);
 }
-body.dark-mode .task .checked span{
+body.dark-mode .task .done span{
   text-decoration: line-through;
   color: hsl(234, 11%, 52%);
 }
@@ -181,7 +181,7 @@ body.light-mode .task label {
   color: #303038;
 }
 
-body.light-mode .task .checked span {
+body.light-mode .task .done span {
   text-decoration: line-through;
   color: hsl(236, 9%, 61%);
 }

@@ -28,13 +28,7 @@ function Card({ filter }) {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    tasks.forEach((task) => {
-      if (task.status === "done") {
-        document.querySelector("#label" + task.id).classList.add("checked");
-      }
-    });
-  }, [tasks]);
+
 
   const { name, status } = formValue;
 
@@ -147,7 +141,7 @@ function Card({ filter }) {
                           }
                         }}
                       >
-                        <label id={"label" + task.id}>
+                        <label id={"label" + task.id} className={task.status}>
                           <input
                             type="checkbox"
                             className="filled-in"
@@ -162,7 +156,7 @@ function Card({ filter }) {
                                 });
                                 document
                                   .querySelector("#label" + task.id)
-                                  .classList.add("checked");
+                                  .classList.add("done");
                               } else {
                                 editTask({
                                   name: task.name,
@@ -171,7 +165,7 @@ function Card({ filter }) {
                                 });
                                 document
                                   .querySelector("#label" + task.id)
-                                  .classList.remove("checked");
+                                  .classList.remove("done");
                               }
                             }}
                           />
@@ -198,7 +192,7 @@ function Card({ filter }) {
                             }
                           }}
                         >
-                          <label className="checked">
+                          <label className="done">
                             <input
                               type="checkbox"
                               className="filled-in"
