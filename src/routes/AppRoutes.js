@@ -8,10 +8,13 @@ function AppRoutes() {
     <BrowserRouter>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Card filter="all" />} />
-        <Route path="/completed" element={<Card filter="completed" />} />
-        <Route path="/todo" element={<Card filter="todo" />} />
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/Reto2-Sprint3-AG/" element={<Card filter="all" />} />
+        <Route
+          path="/Reto2-Sprint3-AG/completed"
+          element={<Card filter="completed" />}
+        />
+        <Route path="/Reto2-Sprint3-AG/todo" element={<Card filter="todo" />} />
+        <Route path="*" element={<Navigate to="/Reto2-Sprint3-AG/" />} />
       </Routes>
     </BrowserRouter>
   );

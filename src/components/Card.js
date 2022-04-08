@@ -285,13 +285,13 @@ function Card({ filter }) {
             <ActionsBar className="actionsBar">
               <Left className="left">{counter} items left</Left>
               <FooterNav className="footerNav" id="footerNav">
-                <Link to="/">
+                <Link to="/Reto2-Sprint3-AG/">
                   <span>All</span>
                 </Link>
-                <Link to="/todo">
+                <Link to="/Reto2-Sprint3-AG/todo">
                   <span>Active</span>
                 </Link>
-                <Link to="/completed">
+                <Link to="/Reto2-Sprint3-AG/completed">
                   <span>Completed</span>
                 </Link>
               </FooterNav>
@@ -301,13 +301,13 @@ function Card({ filter }) {
             </ActionsBar>
           </div>
           <FooterNav className="footerNav footerNavMobile">
-            <Link to="/">
+            <Link to="/Reto2-Sprint3-AG/">
               <span>All</span>
             </Link>
-            <Link to="/todo">
+            <Link to="/Reto2-Sprint3-AG/todo">
               <span>Active</span>
             </Link>
-            <Link to="/completed">
+            <Link to="/Reto2-Sprint3-AG/completed">
               <span>Completed</span>
             </Link>
           </FooterNav>
