@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Reto2-Sprint3-AG/static/css/main.30a2e6af.css",
-    "main.js": "/Reto2-Sprint3-AG/static/js/main.38dafc40.js",
+    "main.js": "/Reto2-Sprint3-AG/static/js/main.66d78958.js",
     "index.html": "/Reto2-Sprint3-AG/index.html",
     "main.30a2e6af.css.map": "/Reto2-Sprint3-AG/static/css/main.30a2e6af.css.map",
-    "main.38dafc40.js.map": "/Reto2-Sprint3-AG/static/js/main.38dafc40.js.map"
+    "main.66d78958.js.map": "/Reto2-Sprint3-AG/static/js/main.66d78958.js.map"
   },
   "entrypoints": [
     "static/css/main.30a2e6af.css",
-    "static/js/main.38dafc40.js"
+    "static/js/main.66d78958.js"
   ]
 }
