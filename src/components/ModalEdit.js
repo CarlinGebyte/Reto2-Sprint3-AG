@@ -67,7 +67,7 @@ function ModalEdit() {
             type="submit"
             name="action"
           >
-            Submit
+            Edit
           </button>
         </form>
       </Modal>
